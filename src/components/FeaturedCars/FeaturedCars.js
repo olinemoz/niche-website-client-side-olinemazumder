@@ -22,8 +22,8 @@ const FeaturedCars = () => {
                     featuredCars.map(car => {
                         return (
                             <div className="col-md-4 mb-4" key={car._id}>
-                                <Card style={{width: '95%', height: '440px'}} className="mx-auto mt-3">
-                                    <Card.Img variant="top" src={car.image} style={{height: '200px'}}/>
+                                <Card style={{width: '95%', height: 'auto'}} className="mx-auto mt-3">
+                                    <Card.Img variant="top" src={car.image} style={{height: '280px'}}/>
                                     <Card.Body>
                                         <Card.Title>{car.name}</Card.Title>
                                         <Card.Text>

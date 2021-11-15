@@ -4,7 +4,6 @@ import AuthProvider from "./context/AuthProvider";
 import Login from "./pages/Login/Login/Login";
 import Register from "./pages/Register/Register";
 import Home from "./pages/Home/Home";
-import Header from "./components/Header/Header";
 import PrivateRoute from "./pages/Login/PrivateRoute/PrivateRoute";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import ExploreProducts from "./pages/ExploreProducts/ExploreProducts";
@@ -15,7 +14,6 @@ function App() {
     return (
         <AuthProvider>
             <Router>
-                <Header/>
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/home" component={Home}>

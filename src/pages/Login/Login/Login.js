@@ -28,22 +28,21 @@ const Login = () => {
         handleGoogleSignedIn(location, history)
     }
     return (
-        <div className="w-50 mx-auto p-4 shadow-lg" style={{marginTop: "65px"}}>
+        <div style={{marginTop: "65px"}}>
             <Container>
-                <h2>Login</h2>
+
                 {
-                    !isLoading && <Form onSubmit={handleLoginSubmit}>
+                    !isLoading && <Form className="p-4 mx-auto shadow-lg w-75" onSubmit={handleLoginSubmit}>
+                        <h2 className="py-2">Login</h2>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control
                                 type="email"
+                                className="w-100"
                                 placeholder="Enter email"
                                 name="email"
                                 onChange={(event) => handleOnChange(event)}
                                 required
-                                style={{
-                                    width: "75%"
-                                }}
                             />
                         </Form.Group>
 
@@ -51,28 +50,26 @@ const Login = () => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control
                                 type="password"
+                                className="w-100"
                                 placeholder="Password"
                                 name="password"
                                 onChange={(event) => handleOnChange(event)}
                                 required
-                                style={{
-                                    width: "75%"
-                                }}
                             />
                         </Form.Group>
                         <Button variant="primary" type="submit">
                             Login
                         </Button>
 
+                        {
+                            !isLoading &&
+                            <Button variant="primary" className="ms-3" onClick={handleGoogleLogin}>Google Sign In</Button>
+                        }
+                          <br/>
                         <Button variant="text" onClick={() => history.push(`/register`)}>
                             Not Yet Registered? <span style={{textDecoration: "underline"}}>Please Register</span>
                         </Button>
                     </Form>
-                }
-                <br/>
-                {
-                    !isLoading &&
-                    <Button variant="primary" onClick={handleGoogleLogin}>Google Sign In</Button>
                 }
 
                 {

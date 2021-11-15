@@ -26,7 +26,7 @@ const Review = () => {
             {
                 (!admin && user?.email) &&
                 <div>
-                    <form onSubmit={handleSubmit(onSubmit)} className="shadow-lg p-4 w-50 mx-auto mt-4">
+                    <form onSubmit={handleSubmit(onSubmit)} className="shadow-lg p-4 w-75 mx-auto mt-4">
                     <textarea className="form-control w-100 d-inline mt-3" placeholder="Your Feedback"
                               defaultValue="" {...register("feedback")} />
                         <small className="text-muted">Rating Should be 0 to 5.0</small>

@@ -27,12 +27,12 @@ const Register = () => {
         event.preventDefault();
     }
     return (
-        <div className="w-50 mx-auto p-4 shadow-lg" style={{marginTop: "65px"}}>
+        <div style={{marginTop: "65px"}}>
             <Container>
-                <h2>Register</h2>
                 {
                     !isLoading &&
-                    <Form onSubmit={handleRegistration}>
+                    <Form onSubmit={handleRegistration} className="p-4 mx-auto shadow-lg w-75">
+                        <h2 className="py-2">Register</h2>
                         <Form.Group className="mb-3" controlId="formBasicName">
                             <Form.Label>Name</Form.Label>
                             <Form.Control
@@ -41,9 +41,7 @@ const Register = () => {
                                 name="username"
                                 onChange={(event) => handleOnChange(event)}
                                 required
-                                style={{
-                                    width: "75%"
-                                }}
+                                className="w-100"
                             />
                         </Form.Group>
 
@@ -55,9 +53,7 @@ const Register = () => {
                                 name="email"
                                 onChange={(event) => handleOnChange(event)}
                                 required
-                                style={{
-                                    width: "75%"
-                                }}
+                                className="w-100"
                             />
                         </Form.Group>
 
@@ -69,9 +65,7 @@ const Register = () => {
                                 name="password"
                                 onChange={(event) => handleOnChange(event)}
                                 required
-                                style={{
-                                    width: "75%"
-                                }}
+                                className="w-100"
                             />
                         </Form.Group>
 
@@ -83,9 +77,7 @@ const Register = () => {
                                 name="password2"
                                 onChange={(event) => handleOnChange(event)}
                                 required
-                                style={{
-                                    width: "75%"
-                                }}
+                                className="w-100"
                             />
                         </Form.Group>
 

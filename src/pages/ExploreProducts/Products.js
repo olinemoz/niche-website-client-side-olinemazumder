@@ -9,8 +9,8 @@ const Products = ({product}) => {
         history.push(`/purchase/${_id}`)
     }
     return (
-        <Card style={{width: '95%', height: '440px'}} className="mx-auto mt-3">
-            <Card.Img variant="top" src={image} style={{height: '200px'}}/>
+        <Card style={{width: '95%', height: 'auto'}} className="mx-auto mt-3">
+            <Card.Img variant="top" src={image} style={{height: '280px'}}/>
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
                 <Card.Text>
